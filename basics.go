@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+
 func helloWolrd() {
 	fmt.Println("hello world")
 }
@@ -24,7 +25,10 @@ func sum_char_codes(n string) {
 }
 
 func main() {
-	// helloWolrd()
-	// add(15, 35)
+	helloWolrd()
+	add(15, 35)
 	sum_char_codes("francielle")
 }
+
+
+
