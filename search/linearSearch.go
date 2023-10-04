@@ -9,6 +9,6 @@ func linear_search(arr []int, target int) bool {
 	return false
 }
 
-func main() {
-	println(linear_search([]int{1, 2, 3, 4, 5}, 8))
-}
+// func main() {
+// 	println(linear_search([]int{1, 2, 3, 4, 5}, 8))
+// }
