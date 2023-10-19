@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 func binarySearch(array []int, targ int) bool {
 	lo := 0
 	hi := len(array)
@@ -22,6 +20,6 @@ func binarySearch(array []int, targ int) bool {
 	return false
 }
 
-func main() {
-	fmt.Println(binarySearch([]int{1, 2, 3, 4, 5}, 3))
-}
+// func main() {
+// 	fmt.Println(binarySearch([]int{1, 2, 3, 4, 5}, 3))
+// }
