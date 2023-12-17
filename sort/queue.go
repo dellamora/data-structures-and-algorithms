@@ -23,24 +23,20 @@ func (q *Queue) Size() int {
 	return len(q.items)
 }
 
-func main() {
-	myQueue := Queue{}
+// func main() {
+// 	myQueue := Queue{}
 
-	myQueue.Enqueue(1)
-	myQueue.Enqueue(2)
-	myQueue.Enqueue(3)
-	myQueue.Enqueue(4)
-	myQueue.Enqueue(5)
+// 	myQueue.Enqueue(1)
+// 	myQueue.Enqueue(2)
+// 	myQueue.Enqueue(3)
+// 	myQueue.Enqueue(4)
+// 	myQueue.Enqueue(5)
 
-	fmt.Println("Queue size:", myQueue.Size())
-	fmt.Println(myQueue.items)
+// 	fmt.Println("items:", myQueue.items)
 
-	item, err := myQueue.Dequeue()
-	if err == nil {
-		fmt.Println(item)
-	}
-
-	fmt.Println( myQueue.Size())
-	myQueue.Enqueue(6)
-	fmt.Println(myQueue.items)
-}
+// 	myQueue.Dequeue()
+// 	myQueue.Dequeue()
+// 	myQueue.Dequeue()
+// 	fmt.Println(myQueue.items)
+	
+// }
