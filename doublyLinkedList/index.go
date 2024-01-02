@@ -51,8 +51,17 @@ func (ddl* doublyLinkedList) insertAt(data int, idx int) (int, error) {
     return 0, nil
 }
 
-func (ddl* doublyLinkedList) remove() {
-
+func (ddl* doublyLinkedList) remove(data int, idx int) (int, error) {
+    if idx == 0 {
+        ddl.head = ddl.head.next
+    } else {
+        currNode := ddl.head
+        for i := 0; i < idx-1; i++ {
+            currNode = currNode.next
+        }
+        currNode.next = currNode.next.next
+    }
+    return 0, nil
 }
 
 func (ddl* doublyLinkedList) append() {
@@ -94,6 +103,10 @@ func main() {
 
     fmt.Println("ddl reverse:")
     dll.PrintReverse()
+    fmt.Println("ddl insertAt:")
     dll.insertAt(100, 2)
+    dll.PrintForward()
+    fmt.Println("ddl remove:")
+    dll.remove(100, 2)
     dll.PrintForward()
 }
