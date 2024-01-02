@@ -1,10 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type node struct {
 	data int
-	node string
 	prev *node
 	next *node
 }
@@ -15,7 +16,7 @@ type doublyLinkedList struct {
 	tail *node
 }
 
-func  (dll *doublyLinkedList) AddNode(data int) {
+func  (dll *doublyLinkedList) prepend(data int) {
     newNode := &node{
         data: data,
         prev: nil,
@@ -31,6 +32,36 @@ func  (dll *doublyLinkedList) AddNode(data int) {
     }
 }
 
+func (ddl* doublyLinkedList) insertAt(data int, idx int) (int, error) {
+	newNode := &node{
+        data: data,
+        prev: nil,
+        next: nil,
+    }  
+    if idx == 0 {
+    	ddl.prepend(data)
+    } else {
+    	currNode := ddl.head
+    	for i := 0; i < idx-1; i++ {
+    		currNode = currNode.next
+    	}
+    	newNode.next = currNode.next
+    	currNode.next = newNode
+    }
+    return 0, nil
+}
+
+func (ddl* doublyLinkedList) remove() {
+
+}
+
+func (ddl* doublyLinkedList) append() {
+
+}
+
+func (ddl* doublyLinkedList) get() {
+		
+}
 
 func (dll *doublyLinkedList) PrintForward() {
     currNode := dll.head
@@ -53,14 +84,16 @@ func (dll *doublyLinkedList) PrintReverse() {
 
 func main() {
     dll := doublyLinkedList{}
-    dll.AddNode(12)
-    dll.AddNode(26)
-    dll.AddNode(8)
-    dll.AddNode(78)
+    dll.prepend(12)
+    dll.prepend(26)
+    dll.prepend(8)
+    dll.prepend(78)
 
     fmt.Println("ddl forward:")
     dll.PrintForward()
 
     fmt.Println("ddl reverse:")
     dll.PrintReverse()
+    dll.insertAt(100, 2)
+    dll.PrintForward()
 }
