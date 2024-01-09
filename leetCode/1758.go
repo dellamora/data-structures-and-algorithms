@@ -20,8 +20,3 @@ func minOperations(s string) int {
 	return min(count, len(s) - count)
 }
 
-func main() {
-	s := "0100"
-	minOperations(s)	
-	println(minOperations(s))
-}
