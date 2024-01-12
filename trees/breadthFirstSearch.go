@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-type node struct {
-	data  int
-	left  *node
-	right *node
-}
+// type node struct {
+// 	data  int
+// 	left  *node
+// 	right *node
+// }
 
 
 type Queue struct {
@@ -60,36 +60,36 @@ func bfs(head *node, needle int) bool {
 }
 
 
-func main() {
-	root := &node{
-		data: 1,
-		left: &node{
-			data: 2,
-			left: &node{
-				data: 4,
-				left: nil,
-				right: nil,
-			},
-			right: &node{
-				data: 5,
-				left: nil,
-				right: nil,
-			},
-		},
-		right: &node{
-			data: 3,
-			left: &node{
-				data: 6,
-				left: nil,
-				right: nil,
-			},
-			right: &node{
-				data: 7,
-				left: nil,
-				right: nil,
-			},
-		},
-	}
+// func main() {
+// 	root := &node{
+// 		data: 1,
+// 		left: &node{
+// 			data: 2,
+// 			left: &node{
+// 				data: 4,
+// 				left: nil,
+// 				right: nil,
+// 			},
+// 			right: &node{
+// 				data: 5,
+// 				left: nil,
+// 				right: nil,
+// 			},
+// 		},
+// 		right: &node{
+// 			data: 3,
+// 			left: &node{
+// 				data: 6,
+// 				left: nil,
+// 				right: nil,
+// 			},
+// 			right: &node{
+// 				data: 7,
+// 				left: nil,
+// 				right: nil,
+// 			},
+// 		},
+// 	}
 
-	fmt.Println(bfs(root, 6))
-}
+// 	fmt.Println(bfs(root, 6))
+// }
