@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // Graph Terms
 
 // cycle: When you start at Node(x), follow the links, and back at Node(x) again.
@@ -17,12 +15,11 @@ import "fmt"
 // node: A single item in a graph
 // edge: A connection between two nodes
 
-
-type Graph struct {
+type GraphMatrix struct {
 	adjacencyMatrix [][]int
 }
 
-func bfs(graph *Graph, startNode int) []int {
+func bfs(graph *GraphMatrix, startNode int) []int {
 	numNodes := len(graph.adjacencyMatrix)
 	visited := make([]bool, numNodes)
 	queue := []int{startNode}
@@ -46,19 +43,19 @@ func bfs(graph *Graph, startNode int) []int {
 	return result
 }
 
-func main() {
-	graph := &Graph{
-		adjacencyMatrix: [][]int{
-			{0, 1, 1, 0, 0},
-			{1, 0, 0, 1, 0},
-			{1, 0, 0, 1, 1},
-			{0, 1, 1, 0, 1},
-			{0, 0, 1, 1, 0},
-		},
-	}
+// func main() {
+// 	graph := &Graph{
+// 		adjacencyMatrix: [][]int{
+// 			{0, 1, 1, 0, 0},
+// 			{1, 0, 0, 1, 0},
+// 			{1, 0, 0, 1, 1},
+// 			{0, 1, 1, 0, 1},
+// 			{0, 0, 1, 1, 0},
+// 		},
+// 	}
 
-	startNode := 2
-	result := bfs(graph, startNode)
+// 	startNode := 2
+// 	result := bfs(graph, startNode)
 
-	fmt.Println(result)
-}
+// 	fmt.Println(result)
+// }
